@@ -22,7 +22,7 @@
 	{
 		srand(time(NULL));
 		
-		flock = [[NSMutableArray alloc] init];
+		swarm = [[NSMutableArray alloc] init];
 		
 		CGSize winSize = [[CCDirector sharedDirector] winSize];
 		
@@ -32,7 +32,7 @@
 			boid.xpos = rand()%((NSInteger)winSize.width);
 			boid.ypos = rand()%((NSInteger)winSize.height);
 			boid.vx = boid.vy = (rand()%1) - 0.5;
-			[flock addObject:boid];
+			[swarm addObject:boid];
 			[self addChild:boid];
 			[boid release];
 		}
@@ -44,7 +44,7 @@
 
 - (void)dealloc
 {
-	[flock release];
+	[swarm release];
 	[super dealloc];
 }
 
@@ -66,16 +66,16 @@
 
 - (void)draw
 {  
-	for(Boid *boid in flock)
+	for(Boid *boid in swarm)
 	{
 		[boid draw];
-		[self updateFlock];
+		[self updateSwarm];
 	}
 }
 
-- (void)updateFlock
+- (void)updateSwarm
 {
-	for(Boid *boid in flock)
+	for(Boid *boid in swarm)
 	{
 		Vector *v1 = [self rule1:boid];
 		Vector *v2 = [self rule2:boid];
@@ -99,7 +99,6 @@
 		
 		if (boid.ypos < 0 || boid.ypos > winSize.height)
 			boid.vy = -boid.vy * BOUNCE_ABSORPTION;
-		
 	}
 }
 
@@ -107,7 +106,7 @@
 {
 	float vlim = 1.5;
 	
-	float velocity = sqrt((boid.vx*boid.vx) + (boid.vy*boid.vy));
+	float velocity = [self velocityOf:boid];
 	
 	if (velocity > vlim)
 	{
@@ -123,7 +122,7 @@
 {
 	Vector *pc = [[Vector alloc] init];
 	
-	for(Boid *boid in flock)
+	for(Boid *boid in swarm)
 	{
 		if (b != boid)
 		{
@@ -145,7 +144,7 @@
 {
 	Vector *v = [[Vector alloc] init];
 	
-	for(Boid *boid in flock)
+	for(Boid *boid in swarm)
 	{
 		if (b != boid)
 		{
@@ -164,7 +163,7 @@
 {
 	Vector *v  = [[Vector alloc] init];
 	
-	for(Boid *boid in flock)
+	for(Boid *boid in swarm)
 	{
 		if (b != boid)
 		{
@@ -198,6 +197,11 @@
 	float y = abs(v1.ypos - v2.ypos);
 	
 	return sqrt((x*x) + (y*y));
+}
+
+- (float)velocityOf:(Boid *)boid
+{
+	return sqrt((boid.vx*boid.vx) + (boid.vy*boid.vy));
 }
 
 @end
