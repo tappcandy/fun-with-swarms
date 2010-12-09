@@ -11,7 +11,7 @@
 
 @implementation Boids
 
-+(id) scene
++ (id)scene
 {
 	CCScene *scene = [CCScene node];
 	
@@ -21,9 +21,9 @@
 	return scene;
 }
 
-- (id) init
+- (id)init
 {
-	if((self=[super init]))
+	if((self = [super init]))
 	{
 		Simulator *simulator = [[[Simulator alloc] init] autorelease];
 		[self addChild:simulator];

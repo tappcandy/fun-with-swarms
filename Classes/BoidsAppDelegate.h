@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BoidsAppDelegate : NSObject <UIApplicationDelegate> {
+@interface BoidsAppDelegate : NSObject <UIApplicationDelegate>
+{
 	UIWindow *window;
 }
 

@@ -149,7 +149,7 @@
 	{
 		if (b != boid)
 		{
-			if(distance2d(b, boid) < 20)
+			if([self distanceBetween:b and:boid] < 20)
 			{
 				v.x -= boid.xpos - b.xpos;
 				v.y -= boid.ypos - b.ypos;
@@ -192,7 +192,7 @@
 	return [v autorelease];
 }
 
-float distance2d(Boid *v1, Boid *v2)
+- (float)distanceBetween:(Boid *)v1 and:(Boid *)v2
 {
 	float x = abs(v1.xpos - v2.xpos);
 	float y = abs(v1.ypos - v2.ypos);

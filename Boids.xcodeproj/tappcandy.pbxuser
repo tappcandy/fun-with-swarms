@@ -8,15 +8,15 @@
 	};
 	1F3B9A2B0EF2145700286867 /* BoidsAppDelegate.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {652, 1520}}";
-			sepNavSelRange = "{1520, 0}";
-			sepNavVisRange = "{0, 0}";
+			sepNavIntBoundsRect = "{{0, 0}, {1091, 1600}}";
+			sepNavSelRange = "{2362, 0}";
+			sepNavVisRange = "{0, 1111}";
 		};
 	};
 	1F3B9A2C0EF2145700286867 /* BoidsAppDelegate.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1091, 587}}";
-			sepNavSelRange = "{0, 0}";
+			sepNavIntBoundsRect = "{{0, 0}, {1091, 635}}";
+			sepNavSelRange = "{232, 0}";
 			sepNavVisRange = "{0, 310}";
 		};
 	};
@@ -79,7 +79,7 @@
 	};
 	506EDC2F102F528A00A389B3 /* BoidsScene.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1091, 610}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1091, 635}}";
 			sepNavSelRange = "{194, 0}";
 			sepNavVisRange = "{0, 213}";
 		};
@@ -87,8 +87,8 @@
 	506EDC30102F528A00A389B3 /* BoidsScene.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1091, 635}}";
-			sepNavSelRange = "{319, 0}";
-			sepNavVisRange = "{0, 499}";
+			sepNavSelRange = "{377, 0}";
+			sepNavVisRange = "{0, 500}";
 		};
 	};
 	506EE05D10304ED200A389B3 /* cocos2d libraries */ = {
@@ -126,14 +126,14 @@
 	};
 	CB801F2C12B114F900E7BD91 /* Boid.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {439, 464}}";
-			sepNavSelRange = "{213, 0}";
-			sepNavVisRange = "{28, 232}";
+			sepNavIntBoundsRect = "{{0, 0}, {1091, 635}}";
+			sepNavSelRange = "{186, 0}";
+			sepNavVisRange = "{0, 408}";
 		};
 	};
 	CB801F2D12B114F900E7BD91 /* Boid.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1091, 587}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1091, 635}}";
 			sepNavSelRange = "{146, 0}";
 			sepNavVisRange = "{0, 497}";
 		};
@@ -164,7 +164,7 @@
 	};
 	CB801FDB12B12B1900E7BD91 /* Simulator.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1091, 587}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1091, 635}}";
 			sepNavSelRange = "{318, 0}";
 			sepNavVisRange = "{0, 534}";
 		};

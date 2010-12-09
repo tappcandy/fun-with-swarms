@@ -25,7 +25,6 @@
 - (Vector *)rule2:(Boid *)b;
 - (Vector *)rule3:(Boid *)b;
 - (Vector *)rule4:(Boid *)b;
-
-float distance2d(Boid *v1, Boid *v2);
+- (float)distanceBetween:(Boid *)v1 and:(Boid *)v2;
 
 @end
