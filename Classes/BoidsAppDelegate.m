@@ -8,7 +8,7 @@
 
 #import "BoidsAppDelegate.h"
 #import "cocos2d.h"
-#import "HelloWorldScene.h"
+#import "BoidsScene.h"
 
 @implementation BoidsAppDelegate
 
@@ -50,7 +50,7 @@
 	[CCTexture2D setDefaultAlphaPixelFormat:kTexture2DPixelFormat_RGBA8888];	
 	
 		
-	[[CCDirector sharedDirector] runWithScene: [HelloWorld scene]];
+	[[CCDirector sharedDirector] runWithScene:[Boids scene]];
 }
 
 
